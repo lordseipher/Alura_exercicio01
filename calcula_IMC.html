@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	function mostra(frase){
+		document.write(frase);
+	}
+	function calculaIMC(peso, altura){
+		return peso / (altura * altura);
+	}
+
+	var nome = prompt("Digite seu nome:");
+	informePeso = prompt(nome + ", Digite seu peso:");
+	informeAltura = prompt(nome + ", Digite sua altura");
+	mostra(nome + ", seu IMC é: " + calculaIMC(informePeso, informeAltura).toFixed(2));
+	mostra("<h1>Tabela IMC:</h1>");
+	mostra("MENOR QUE 18,5	   MAGREZA");
+	pulaLinha();
+	mostra("ENTRE 18,5 E 24,9  NORMAL");
+	pulaLinha();
+	mostra("ENTRE 25,0 E 29,9  SOBREPESO");
+	pulaLinha();
+	mostra("ENTRE 30,0 E 39,9  OBESIDADE");
+	pulaLinha();
+	mostra("MAIOR QUE 40,0	   OBESIDADE GRAVE");
+</script>
