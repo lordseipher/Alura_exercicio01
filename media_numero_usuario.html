@@ -8,9 +8,9 @@
 		document.write(frase);
 	}
 	function media(numero1, numero2){
-		return (parseInt(numero1) + parseInt(numero2))/2;
+		return (numero1 + numero2) / 2;
 	}
-	var n1 = prompt("Digite número 1");
-	var n2 = prompt("Digite número 2");
+	var n1 = parseInt(prompt("Digite número 1"));
+	var n2 = parseInt(prompt("Digite número 2"));
 	mostra("A média dos números digitado é: " + media(n1, n2));
 </script>
