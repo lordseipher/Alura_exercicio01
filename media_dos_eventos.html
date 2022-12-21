@@ -1,0 +1,24 @@
+<meta charset="UTF=8">
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+	var numeroEventos = parseInt(prompt("Digite o número de eventos: "));
+	var numero = 1;
+	var totalGasto = 0;
+	if(numeroEventos < 6){
+		while(numero <= numeroEventos){
+			var gasto = parseFloat(prompt("Quanto foi gasto para este evento: ").replace(",","."));
+			totalGasto = totalGasto + gasto;
+			numero++;
+			}
+		var media = totalGasto/numeroEventos;
+		mostra("A media de gasto nós eventos foi R$ : " + media.toLocaleString("pt-BR", {style: "currency", currency:"BRL", minimumFractionDigits: 2}));
+	}else{
+		mostra("Posso realizar de 1 a 5 eventos por mês");
+	}
+</script>
